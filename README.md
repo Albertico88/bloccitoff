@@ -1,2 +1,3 @@
 == README
-Building a self-destructing app
+
+Building a self-destructing task application.
