@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'items/new'
+
+  resources :users, only: [:show] do
+    resources :items
+  end
+  
   get 'welcome/index'
 
   devise_for :users
