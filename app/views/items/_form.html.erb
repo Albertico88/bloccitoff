@@ -1,0 +1,7 @@
+<h4>Add a New Item</h4>
+<%= form_for [current_user, @item] do |f| %>
+  <div class="col-xs-4">
+    <%= f.text_field :name, class: 'form-control', placeholder: "What needs to get done?" %>
+  </div>
+  <%= f.submit "Add Item", class: 'btn btn-primary pull-left' %>
+<% end %>
