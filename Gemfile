@@ -31,6 +31,8 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 # Testing framework
 gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 
+gem 'faker'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
