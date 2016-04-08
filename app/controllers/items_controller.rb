@@ -18,9 +18,14 @@ class ItemsController < ApplicationController
     if @item.destroy
       flash[:notice] = "\"#{@item.name}\" was deleted succesfully."
     else
-      flash[:error] = "There was an error deleting the task."      
+      flash[:error] = "There was an error deleting the task."
     end
-    redirect_to current_user
+    #redirect_to current_user
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
