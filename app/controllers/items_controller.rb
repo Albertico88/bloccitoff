@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
     @item.user = current_user
 
     if @item.save
-      redirect_to current_user, notice: "Your item was saved"
+      redirect_to current_user, notice: "\"#{@item.name}\" has been added"
     else
       flash[:error] = "Error creating item. Please try again."
       render "users/show"
@@ -18,9 +18,8 @@ class ItemsController < ApplicationController
     if @item.destroy
       flash[:notice] = "\"#{@item.name}\" was deleted succesfully."
     else
-      flash[:error] = "There was an error deleting the task."
+      flash[:error] = "There was an error deleting the task. Please try again."
     end
-    #redirect_to current_user
 
     respond_to do |format|
       format.html
