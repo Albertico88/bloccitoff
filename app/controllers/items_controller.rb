@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     else
       flash[:error] = "There was an error deleting the task. Please try again."
     end
-
+    
     respond_to do |format|
       format.html
       format.js
