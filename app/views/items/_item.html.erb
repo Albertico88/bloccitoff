@@ -3,7 +3,9 @@
     <%= item.name %>
   </td>
   <td>
-  <small> Days until item is deleted: </small>
+
+   <%= distance_of_time_in_words(item.created_at + 7.days, Time.now) %>
+
   </td>
   <td>
     <%= link_to "Completed", user_item_path(current_user, item), method: :delete, remote: true,  class: "btn btn-success"%>
